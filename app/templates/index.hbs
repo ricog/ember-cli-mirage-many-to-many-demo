@@ -1,0 +1,15 @@
+<h2>Classes</h2>
+{{#each model.classes as |class|}}
+  <h3>{{class.name}}</h3>
+  {{#each class.students as |student|}}
+    <p>{{student.firstName}} {{student.lastName}}</p>
+  {{/each}}
+{{/each}}
+
+<h2>Students</h2>
+{{#each model.students as |student|}}
+  <h3>{{student.firstName}} {{student.lastName}}</h3>
+  {{#each student.classes as |class|}}
+    <p>{{class.name}}</p>
+  {{/each}}
+{{/each}}
